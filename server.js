@@ -5,7 +5,7 @@ const dotenv = require("dotenv").config();
 const cors = require('cors'); 
 const app = express(); // variable qui, lorsqu'on codera app.get app.use etc, ira chercher les fonctions dans la biblio express
 const path = require('path'); // pour utiliser 'path'
-port = 5000; // numéro du port où on veut jouer notre serveur
+const port = process.env.PORT || 5000;  // Utiliser le port défini par l'environnement, sinon 5000 en local
 
 // Connexion à la DB
 connectDB();
